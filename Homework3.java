@@ -1,0 +1,32 @@
+package cop2805;
+
+public class Homework3 {
+		
+	    public static void main(String[] args) {
+	        
+	    	//Main function + the arrays
+	    	String [] colors = {"Red","Green","Blue"};
+	    	Integer[] numbers = {1, 2, 3};
+	    	Double[] circleRadius = {3.0, 5.9, 2.9};
+	    	
+	    	System.out.println("Colors: " + min(colors));
+	    	
+	    	System.out.println("Numbers: " + min(numbers));
+	    	
+	        System.out.println("Circle Radius: " + min(circleRadius));
+	    	
+	    }
+	    //Doing compareTo and min function
+	    public static <E extends Comparable<E>> E min (E [] list) {
+	    	
+	    	E minElement = list[0];
+	    	
+	    	for (int i = 1; i < list.length; i++) {
+	            if (list[i].compareTo(minElement) < 0) {
+	            	
+	                minElement = list[i]; }
+	    	}
+	    	
+	    	return minElement;
+	    }    
+}
